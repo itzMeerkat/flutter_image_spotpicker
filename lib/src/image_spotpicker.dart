@@ -47,7 +47,8 @@ class ImageSpotpickerState extends State<ImageSpotpicker> {
           double heightMul = widget.imageSize.height / b.size.height;
           Offset locPos = details.localPosition;
           double lx = locPos.dx * widthMul, ly = locPos.dy * heightMul;
-          print(locPos);
+          //print(locPos);
+          //print("DASADSASD");
           for (int i = 0; i < widget.pins.length; i++) {
             if (isOnPin(lx, ly, widget.pins[i])) {
               widget.pins.removeAt(i);
@@ -55,6 +56,7 @@ class ImageSpotpickerState extends State<ImageSpotpicker> {
               return;
             }
           }
+          //print(locPos);
           widget.pins.add(Offset(lx, ly));
           setState(() {});
         },
