@@ -1,0 +1,9 @@
+.packages
+pubspec.lock
+.dart_tool
+.vscode
+doc
+build
+android
+ios
+web
