@@ -52,11 +52,11 @@ class ImageSpotpickerPainter extends CustomPainter {
     }
 
     canvas.translate(fitOffsetX, fitOffsetY);
-    canvas.scale(scale);
+    //canvas.scale(scale);
 
     for (int i = 0; i < pins.length; i++) {
       Offset paintOrigin =
-          Offset(pins[i].dx - pinSize / 2, pins[i].dy - pinSize);
+          Offset(pins[i].dx*scale - pinSize / 2, pins[i].dy*scale - pinSize);
       if (debug == true) {
         canvas.drawRect(
             Rect.fromPoints(
