@@ -11,10 +11,10 @@ class MyApp extends StatefulWidget {
 }
 
 class ImageSpotpickerExample extends State<MyApp> {
-  static List<List<double>> points = [
-    [178, 152],
-    [185, 272],
-    [245, 186],
+  static List<Map<String, double>> points = [
+    {'x': 178, 'y': 152},
+    {'x': 185, 'y': 272},
+    {'x': 245, 'y': 186},
   ];
 
   @override
@@ -26,7 +26,7 @@ class ImageSpotpickerExample extends State<MyApp> {
               imagePath: 'assets/worldmap.png',
               imageSize: Size(698, 566),
               pins: points,
-              isDebug: false,
+              isDebug: true,
             )));
   }
 }
