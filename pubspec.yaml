@@ -1,5 +1,5 @@
 name: flutter_image_spotpicker
-version: 0.1.1
+version: 0.2.0
 description: Load an image, then the library allows you to select/unselect multiple spot on it. Returns a list of points.
 homepage: https://github.com/itzMeerkat/flutter_image_spotpicker
 
