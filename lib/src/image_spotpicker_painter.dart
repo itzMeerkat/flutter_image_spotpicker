@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ImageSpotpickerPainter extends CustomPainter {
-  final List<Offset> pins;
+  final List<List<double>> pins;
   final Paint blackPaint = Paint()
     ..color = Color.fromRGBO(255, 0, 0, 1)
     ..strokeWidth = 5;
@@ -56,7 +56,7 @@ class ImageSpotpickerPainter extends CustomPainter {
 
     for (int i = 0; i < pins.length; i++) {
       Offset paintOrigin =
-          Offset(pins[i].dx*scale - pinSize / 2, pins[i].dy*scale - pinSize);
+          Offset(pins[i][0]*scale - pinSize / 2, pins[i][1]*scale - pinSize);
       if (debug == true) {
         canvas.drawRect(
             Rect.fromPoints(

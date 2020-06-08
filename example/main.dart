@@ -11,10 +11,10 @@ class MyApp extends StatefulWidget {
 }
 
 class ImageSpotpickerExample extends State<MyApp> {
-  static List<Offset> points = [
-    Offset(178, 152),
-    Offset(185, 272),
-    Offset(245, 186),
+  static List<List<double>> points = [
+    [178, 152],
+    [185, 272],
+    [245, 186],
   ];
 
   @override

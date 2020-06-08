@@ -4,7 +4,7 @@ import 'image_spotpicker_painter.dart';
 
 class ImageSpotpicker extends StatefulWidget {
   final String imagePath;
-  final List<Offset> pins;
+  final List<List<double>> pins;
   final Size imageSize;
   final bool isDebug;
   final double pinSize;
@@ -25,10 +25,10 @@ class ImageSpotpicker extends StatefulWidget {
 }
 
 class ImageSpotpickerState extends State<ImageSpotpicker> {
-  bool isOnPin(double cx, double cy, Offset pinPos) {
+  bool isOnPin(double cx, double cy, List<double> pinPos) {
     var halfPinSize = widget.pinSize / 2;
-    double dx = cx - pinPos.dx;
-    double dy = pinPos.dy - cy;
+    double dx = cx - pinPos[0];
+    double dy = pinPos[1] - cy;
     if (dx < halfPinSize &&
         dy < widget.pinSize &&
         dx > -halfPinSize &&
@@ -57,7 +57,7 @@ class ImageSpotpickerState extends State<ImageSpotpicker> {
             }
           }
           //print(locPos);
-          widget.pins.add(Offset(lx, ly));
+          widget.pins.add([lx, ly]);
           setState(() {});
         },
         child: CustomPaint(
