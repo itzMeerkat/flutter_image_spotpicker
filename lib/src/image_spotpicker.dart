@@ -4,7 +4,7 @@ import 'image_spotpicker_painter.dart';
 
 class ImageSpotpicker extends StatefulWidget {
   final String imagePath;
-  final List<Map> pins;
+  final List<Map<String, double>> pins;
   final Size imageSize;
   final bool isDebug;
   final double pinSize;
@@ -47,7 +47,7 @@ class ImageSpotpickerState extends State<ImageSpotpicker> {
           double heightMul = widget.imageSize.height / b.size.height;
           Offset locPos = details.localPosition;
           double lx = locPos.dx * widthMul, ly = locPos.dy * heightMul;
-          print("$widthMul, $heightMul");
+          //print("$widthMul, $heightMul");
           //print(locPos);
           //print("DASADSASD");
           for (int i = 0; i < widget.pins.length; i++) {
